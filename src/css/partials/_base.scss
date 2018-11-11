@@ -1,9 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $costie-blue;
+}
+
 body {
   width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: $costie-font;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: -webkit-repeating-linear-gradient($costie-black, $costie-black 50%, $costie-blue 50%, $costie-blue 100%);

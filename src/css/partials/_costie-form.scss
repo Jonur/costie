@@ -1,0 +1,18 @@
+.app-titles {
+  .costie-form {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  label {
+    color: $costie-black;
+    transform: translate(0, 1.5px) scale(0.85);
+    margin-bottom: 5px;
+  }
+
+  button {
+    background-color: $costie-black;
+    color: $costie-white;
+    margin-top: 50px;
+  }
+}

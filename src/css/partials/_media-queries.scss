@@ -1,11 +1,7 @@
-@media screen and (max-height: 543px) {
+@media screen and (min-height: 568px) {
   .app-titles {
-    .logo {
-      margin-top: -3.125rem;
-    }
-
     h2 {
-      margin-bottom: 3rem;
+      margin-bottom: 7rem;
     }
   }
 }
