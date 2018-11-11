@@ -1,30 +1,40 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import SelectParticipants from './Forms/SelectParticipants';
+import About from './Forms/About';
 
 class Forms extends Component {
   state = {
-    participantsOptions: 21,
-    participantsSelected: 0
+    participants: {
+      options: 21,
+      selected: 0
+    }
   };
 
-  participantsOptions = [...Array(this.state.participantsOptions).keys()];
+  participants = [...Array(this.state.participants.options).keys()];
 
   handleChange = e => {
-    this.setState({
-      participantsSelected: +e.target.value
-    });
+    const newState = this.state;
+    newState.participants.selected = +e.target.value;
+
+    this.setState(newState);
   };
 
   render() {
     return (
-      <Card className="centered-card form">
-        <Button variant="fab" aria-label="Currency" className="currency">
-          &pound;
+      <Router>
+        <Card className="centered-card form">
+          <Button variant="fab" aria-label="Currency" className="currency">
+            &pound;
         </Button>
-        <SelectParticipants participantsOptions={this.participantsOptions} handleChange={this.handleChange} />
-      </Card>
+          <Route exact path="/"
+            render={props => <SelectParticipants {...props} participants={this.participants} handleChange={this.handleChange} />} />
+          <Route path="/about"
+            render={props => <About participants={this.state.participants.selected} />} />
+        </Card>
+      </Router>
     );
   }
 }
