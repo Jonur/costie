@@ -1,0 +1,29 @@
+.app-titles {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  .white {
+    color: $costie-white;
+  }
+
+  .logo {
+    font-family: $costie-font-logo;
+    font-size: 4.75rem;
+    margin-top: -13.125rem;
+  }
+
+  h2 {
+    margin-bottom: 7.5rem;
+  }
+
+  .centered-card {
+    width: 75%;
+    margin: 0 12.5%;
+    overflow: visible;
+    text-align: center;
+  }
+}
