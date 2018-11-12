@@ -10,6 +10,11 @@ class Forms extends Component {
     participants: {
       options: 21,
       selected: 0
+    },
+    currency: {
+      title: 'Pound sterling',
+      iso_code: 'GBP',
+      symbol: '£'
     }
   };
 

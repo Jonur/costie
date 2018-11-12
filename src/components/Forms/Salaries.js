@@ -6,12 +6,19 @@ import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 class Salaries extends Component {
+  SALARY_DIGITS = 8;
+
   handleClick = () => {
     this.props.history.push('/start-meeting');
   };
 
   handleBackToStart = () => {
     this.props.history.push('/');
+  };
+
+  handleInput = e => {
+    e.target.value = +e.target.value.replace(/[^0-9]/g, '');
+    e.target.value = Math.max(0, +e.target.value).toString().slice(0, this.SALARY_DIGITS);
   };
 
   render() {
@@ -22,6 +29,7 @@ class Salaries extends Component {
             <InputLabel htmlFor={'amount-' + p}>Salary {p + 1}</InputLabel>
             <Input
               id={'amount-' + p}
+              type="password" pattern="[0-9]{8}" maxLength={this.SALARY_DIGITS} autoComplete="off" onInput={this.handleInput}
               startAdornment={<InputAdornment position="start">&pound;</InputAdornment>}
             />
           </FormControl>
