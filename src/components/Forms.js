@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import SelectParticipants from './Forms/SelectParticipants';
-import About from './Forms/About';
+import Salaries from './Forms/Salaries';
 
 class Forms extends Component {
   state = {
@@ -28,11 +28,11 @@ class Forms extends Component {
         <Card className="centered-card form">
           <Button variant="fab" aria-label="Currency" className="currency">
             &pound;
-        </Button>
+          </Button>
           <Route exact path="/"
             render={props => <SelectParticipants {...props} participants={this.participants} handleChange={this.handleChange} />} />
-          <Route path="/about"
-            render={props => <About participants={this.state.participants.selected} />} />
+          <Route path="/salaries"
+            render={props => <Salaries {...props} participants={this.state.participants.selected} />} />
         </Card>
       </Router>
     );

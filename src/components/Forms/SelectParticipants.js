@@ -7,7 +7,7 @@ import Input from '@material-ui/core/Input';
 
 class SelectParticipants extends Component {
   handleClick = () => {
-    this.props.history.push('/about');
+    this.props.history.push('/salaries');
   };
 
   render() {
@@ -16,9 +16,9 @@ class SelectParticipants extends Component {
 
     return (
       <React.Fragment>
-        <FormControl className="costie-form">
-          <InputLabel htmlFor="uncontrolled-native">Number of participants</InputLabel>
-          <NativeSelect defaultValue={0} input={<Input name="participants" id="uncontrolled-native" />} onChange={this.props.handleChange}>
+        <FormControl fullWidth className="costie-form">
+          <InputLabel htmlFor="participants">Number of participants</InputLabel>
+          <NativeSelect defaultValue={0} input={<Input name="participants" id="participants" />} onChange={this.props.handleChange}>
             {participantsOptions}
           </NativeSelect>
         </FormControl>
