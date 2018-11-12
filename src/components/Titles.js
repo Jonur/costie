@@ -11,10 +11,10 @@ class Titles extends Component {
       <React.Fragment>
         <Typography component="h1" variant="h3" align="center" className="white logo" onClick={this.handleClick}>
           Costie
-      </Typography>
+        </Typography>
         <Typography component="h2" variant="h5" align="center" className="white">
           Time is money.
-      </Typography>
+        </Typography>
       </React.Fragment >
     );
   }

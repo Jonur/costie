@@ -12,13 +12,13 @@ class SelectParticipants extends Component {
 
   render() {
     const { participants } = this.props,
-      participantsOptions = participants.map(p => <option value={p} key={p}>{p}</option>);
+      participantsOptions = participants.map(p => p >= 2 ? <option value={p} key={p}>{p}</option> : false);
 
     return (
       <React.Fragment>
         <FormControl fullWidth className="costie-form">
           <InputLabel htmlFor="participants">Number of participants</InputLabel>
-          <NativeSelect defaultValue={0} input={<Input name="participants" id="participants" />} onChange={this.props.handleChange}>
+          <NativeSelect defaultValue={2} input={<Input name="participants" id="participants" />} onChange={this.props.handleChange}>
             {participantsOptions}
           </NativeSelect>
         </FormControl>

@@ -9,6 +9,15 @@
     &:not(:first-of-type) {
       margin-top: 15px;
     }
+
+    .timer {
+      color: $costie-grey;
+      margin: 10px 0 1rem 0;
+    }
+
+    .hidden {
+      display: none;
+    }
   }
 
   label {

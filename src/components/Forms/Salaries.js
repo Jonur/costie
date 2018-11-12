@@ -8,13 +8,19 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 class Salaries extends Component {
   SALARY_DIGITS = 8;
 
+  collectSalaries = () => [...document.querySelectorAll('input[id^="amount-"]')].reduce((sum, i) => sum + +i.value, 0);
+
   handleClick = () => {
+    const total = this.collectSalaries(),
+      // (work hours per day) * (working days per week) * (weeks in a year) * (minutes in an hour) * (seconds in a minute)
+      totalWorkedSecondsInYear = 7.5 * 5 * 52.1429 * 60 * 60,
+      totalPerSecond = parseFloat((total / totalWorkedSecondsInYear).toFixed(2));
+
+    this.props.updateTotals(total, totalPerSecond);
     this.props.history.push('/start-meeting');
   };
 
-  handleBackToStart = () => {
-    this.props.history.push('/');
-  };
+  handleBackToStart = () => this.props.history.push('/');
 
   handleInput = e => {
     e.target.value = +e.target.value.replace(/[^0-9]/g, '');
@@ -22,7 +28,7 @@ class Salaries extends Component {
   };
 
   render() {
-    const { participants } = this.props,
+    const { participants, currency } = this.props,
       participantsOptions = [...Array(participants).keys()].map(p => {
         return (
           <FormControl key={p} fullWidth className="costie-form">
@@ -30,7 +36,7 @@ class Salaries extends Component {
             <Input
               id={'amount-' + p}
               type="password" pattern="[0-9]{8}" maxLength={this.SALARY_DIGITS} autoComplete="off" onInput={this.handleInput}
-              startAdornment={<InputAdornment position="start">&pound;</InputAdornment>}
+              startAdornment={<InputAdornment position="start">{currency}</InputAdornment>}
             />
           </FormControl>
         );
@@ -44,7 +50,7 @@ class Salaries extends Component {
     ) : (
         <React.Fragment>
           <div className="costie-form">Please select a number of participants.</div>
-          <Button variant="contained" onClick={this.handleBackToStart}>START</Button>
+          <Button variant="contained" onClick={this.handleBackToStart}>Begin</Button>
         </React.Fragment>
       );
   }
