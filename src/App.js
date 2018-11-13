@@ -5,7 +5,7 @@ import Forms from './components/Forms';
 class App extends Component {
   render() {
     return (
-      <div className="app-titles">
+      <div className="app">
         <Titles />
         <Forms />
       </div>

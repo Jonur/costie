@@ -1,13 +1,14 @@
-@media screen and (min-height: 568px) {
-  .app-titles {
-    h2 {
-      margin-bottom: 7rem;
-    }
+@media screen and (min-height: 768px) {
+  .app {
+    background: none;
+    padding-top: 150px;
   }
 }
 
-@media screen and (min-height: 667px) {
-  body {
-    height: 100vh;
+@media screen and (min-height: 938px) {
+  .app {
+    h2 {
+      margin-bottom: 7rem;
+    }
   }
 }
