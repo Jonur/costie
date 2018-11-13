@@ -34,4 +34,13 @@ body {
   position: absolute;
 
   @extend %main-background;
+
+  // MUI Theme overwrites
+  label[class*="MuiFormLabel-focused"] {
+    color: $costie-blue-darker;
+  }
+
+  div[class*="MuiInput-underline-"]:after {
+    border-bottom: 2px solid $costie-blue;
+  }
 }
