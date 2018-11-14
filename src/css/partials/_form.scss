@@ -7,4 +7,16 @@
     font-size: 3.25rem;
     color: $costie-white;
   }
+
+  .step-nav {
+    overflow: hidden;
+
+    .push-right {
+      float: right;
+    }
+
+    .push-left {
+      float: left;
+    }
+  }
 }

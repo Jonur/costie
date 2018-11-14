@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import NavigateBefore from '@material-ui/icons/NavigateBefore';
 
 class Meeting extends Component {
   state = {
@@ -66,7 +67,9 @@ class Meeting extends Component {
     ) : (
         <React.Fragment>
           <div className="costie-form">Please select a number of participants.</div>
-          <Button variant="contained" onClick={this.handleBackToStart}>Begin</Button>
+          <Button variant="contained" onClick={this.handleBackToStart} className="push-right normalise-left">
+            <NavigateBefore className="before" /> Back
+          </Button>
         </React.Fragment>
       );
   }

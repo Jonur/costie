@@ -27,8 +27,22 @@
   }
 
   button {
-    background-color: $costie-black;
-    color: $costie-white;
-    margin-top: 50px;
+    &:not(.outlined) {
+      background-color: $costie-black;
+      color: $costie-white;
+      margin-top: 50px;
+    }
+
+    &.outlined {
+      margin-top: 50px;
+    }
+
+    &.normalise-left {
+      padding-left: 8px;
+    }
+
+    &.normalise-right {
+      padding-right: 8px;
+    }
   }
 }

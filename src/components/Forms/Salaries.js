@@ -4,6 +4,8 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import NavigateBefore from '@material-ui/icons/NavigateBefore';
+import NavigateNext from '@material-ui/icons/NavigateNext';
 
 class Salaries extends Component {
   SALARY_DIGITS = 8;
@@ -45,12 +47,21 @@ class Salaries extends Component {
     return participantsOptions.length ? (
       <React.Fragment>
         {participantsOptions}
-        <Button variant="contained" onClick={this.handleClick}>Okay</Button>
+        <div className="step-nav">
+          <Button variant="outlined" className="outlined push-left normalise-left" onClick={this.handleBackToStart}>
+            <NavigateBefore className="before" /> Back
+          </Button>
+          <Button variant="contained" onClick={this.handleClick} className="push-right normalise-right">
+            Next <NavigateNext className="next" />
+          </Button>
+        </div>
       </React.Fragment>
     ) : (
         <React.Fragment>
           <div className="costie-form">Please select a number of participants.</div>
-          <Button variant="contained" onClick={this.handleBackToStart}>Begin</Button>
+          <Button variant="contained" onClick={this.handleBackToStart} className="normalise-left">
+            <NavigateBefore className="before" /> Back
+          </Button>
         </React.Fragment>
       );
   }

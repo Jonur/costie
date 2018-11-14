@@ -4,6 +4,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import Input from '@material-ui/core/Input';
+import NavigateNext from '@material-ui/icons/NavigateNext';
 
 class SelectParticipants extends Component {
   handleClick = () => {
@@ -22,7 +23,9 @@ class SelectParticipants extends Component {
             {participantsOptions}
           </NativeSelect>
         </FormControl>
-        <Button variant="contained" onClick={this.handleClick}>Next</Button>
+        <Button variant="contained" onClick={this.handleClick} className="normalise-right">
+          Next <NavigateNext className="next" />
+        </Button>
       </React.Fragment>
     );
   }

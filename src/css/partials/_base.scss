@@ -47,4 +47,16 @@ body {
   button[class*="MuiButton-contained-"]:hover {
     background-color: $costie-grey-darker;
   }
+
+  svg[class*="MuiSvgIcon-root"] {
+    font-size: 20px;
+
+    &.before {
+      margin-right: 5px;
+    }
+
+    &.next {
+      margin-left: 5px;
+    }
+  }
 }
