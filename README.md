@@ -1,3 +1,13 @@
+# About
+
+Costie is a meeting cost calculator. It takes the - before-tax preferably - salary amounts of the participants and runs a timer with the meeting's cost per second. The salary fields are safe in password fields and are destroyed the moment the user navigates to the timer, with the application keeping only the sum of all salaries per second.
+
+This project was inspired by the following [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk)'s 2015 [Tweet](https://twitter.com/boredelonmusk/status/588750177084669952?lang=en):
+
+<center><a href="https://imgur.com/uJy27hg"><img src="https://i.imgur.com/uJy27hg.png" title="source: imgur.com" /></a></center>
+
+# Build
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
