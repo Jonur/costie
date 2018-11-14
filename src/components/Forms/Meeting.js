@@ -4,14 +4,23 @@ import Button from '@material-ui/core/Button';
 
 class Meeting extends Component {
   state = {
-    displayAmount: 0
+    displayAmount: 0,
+    secondsRun: 0,
+    secondsDisplay: '00',
+    minutesDisplay: '00',
+    hoursDisplay: '00'
   };
 
   handleBackToStart = () => this.props.history.push('/');
 
   updateDisplayAmount = (totalPerSecond = 0) => {
-    let displayAmount = (+this.state.displayAmount + totalPerSecond).toFixed(2);
-    this.setState({ displayAmount });
+    let displayAmount = (+this.state.displayAmount + totalPerSecond).toFixed(2),
+      secondsRun = +this.state.secondsRun + 1,
+      secondsDisplay = (secondsRun % 60).toString().padStart(2, '0'),
+      minutesDisplay = (Math.floor(secondsRun / 60) % 60).toString().padStart(2, '0'),
+      hoursDisplay = Math.floor(secondsRun / 3600).toString().padStart(2, '0');
+
+    this.setState({ displayAmount, secondsRun, secondsDisplay, minutesDisplay, hoursDisplay });
   };
 
   beginTimer = () => {
@@ -48,7 +57,7 @@ class Meeting extends Component {
           {this.props.currency}{this.state.displayAmount}
         </Typography>
         <Typography component="h2" variant="h5" align="center" className="timer">
-          00:00
+          {this.state.hoursDisplay}:{this.state.minutesDisplay}:{this.state.secondsDisplay}
         </Typography>
         <Button variant="contained" onClick={this.beginTimer} id="begin-timer">Start</Button>
         <Button variant="contained" onClick={this.endTimer} id="end-timer" className="hidden">End</Button>
