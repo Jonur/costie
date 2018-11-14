@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Titles from './components/Titles';
 import Forms from './components/Forms';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div className="app">
         <Titles />
         <Forms />
+        <Footer />
       </div>
     );
   }

@@ -35,6 +35,16 @@ body {
 
   @extend %main-background;
 
+  footer {
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 8px;
+
+    a, a:hover, a:visited {
+      color: $costie-black;
+    }
+  }
+
   // MUI Theme overwrites
   label[class*="MuiFormLabel-focused"] {
     color: $costie-blue-darker;
