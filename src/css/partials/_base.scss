@@ -43,4 +43,8 @@ body {
   div[class*="MuiInput-underline-"]:after {
     border-bottom: 2px solid $costie-blue;
   }
+
+  button[class*="MuiButton-contained-"]:hover {
+    background-color: $costie-grey-darker;
+  }
 }
