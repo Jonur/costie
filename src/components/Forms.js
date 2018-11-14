@@ -15,7 +15,7 @@ class Forms extends Component {
       selected: 2
     },
     currencies: {
-      options: [...'£€$'],
+      options: [...'£€$₽¥₩₹'],
       selected: '£'
     }
   };
