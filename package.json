@@ -1,7 +1,22 @@
 {
   "name": "costie",
   "version": "0.1.0",
-  "private": true,
+  "description": "A meeting cost time-calculator based on the participants' salaries.",
+  "homepage": "https://github.com/Jonur/costie#readme",
+  "bugs": {
+    "url": "https://github.com/Jonur/costie/issues",
+    "email": "d.k.damilos@gmail.com"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Dimitris Damilos",
+    "email": "d.k.damilos@gmail.com",
+    "url": "https://github.com/Jonur"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jonur/costie.git"
+  },
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "material-ui": "^0.20.2",
