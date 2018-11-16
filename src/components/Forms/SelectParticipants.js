@@ -7,19 +7,17 @@ import Input from '@material-ui/core/Input';
 import NavigateNext from '@material-ui/icons/NavigateNext';
 
 class SelectParticipants extends Component {
-  handleClick = () => {
-    this.props.history.push('/salaries');
-  };
+  handleClick = () => this.props.history.push('/salaries');
 
   render() {
-    const { participants } = this.props,
+    const { participants, selected } = this.props,
       participantsOptions = participants.map(p => p >= 2 ? <option value={p} key={p}>{p}</option> : false);
 
     return (
       <React.Fragment>
         <FormControl fullWidth className="costie-form">
           <InputLabel htmlFor="participants">Number of participants</InputLabel>
-          <NativeSelect defaultValue={2} input={<Input name="participants" id="participants" />} onChange={this.props.handleChange}>
+          <NativeSelect defaultValue={selected} input={<Input name="participants" id="participants" />} onChange={this.props.handleChange}>
             {participantsOptions}
           </NativeSelect>
         </FormControl>

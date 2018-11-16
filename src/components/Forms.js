@@ -49,7 +49,8 @@ class Forms extends Component {
             {this.state.currencies.selected}
           </Button>
           <Route exact path="/"
-            render={props => <SelectParticipants {...props} participants={this.participants} handleChange={this.handleChange} />} />
+            render={props => <SelectParticipants {...props} participants={this.participants} selected={this.state.participants.selected}
+              handleChange={this.handleChange} />} />
           <Route path="/salaries"
             render={props => <Salaries {...props} participants={this.state.participants.selected} updateTotals={this.updateTotals}
               currency={this.state.currencies.selected} />} />
