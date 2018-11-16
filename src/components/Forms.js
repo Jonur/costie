@@ -22,7 +22,7 @@ class Forms extends Component {
 
   participants = [...Array(this.state.participants.options).keys()];
 
-  updateTotals = (total, totalPerSecond) => this.setState({ total, totalPerSecond });;
+  updateTotals = (total, totalPerSecond) => this.setState({ total, totalPerSecond });
 
   handleChange = e => {
     const newState = this.state;

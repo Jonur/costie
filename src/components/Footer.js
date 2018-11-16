@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Footer extends Component {
-  render() {
-    const year = (new Date()).getFullYear();
+const Footer = () => {
+  const year = (new Date()).getFullYear();
 
-    return (
-      <footer>&copy;{year} - <a href="https://github.com/Jonur">Jonur</a></footer>
-    )
-  }
+  return (
+    <footer>&copy;{year} - <a href="https://github.com/Jonur">Jonur</a></footer>
+  );
+
 };
+
+export default Footer;

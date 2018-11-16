@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -7,64 +7,60 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import NavigateBefore from '@material-ui/icons/NavigateBefore';
 import NavigateNext from '@material-ui/icons/NavigateNext';
 
-class Salaries extends Component {
-  SALARY_DIGITS = 8;
+const Salaries = ({ updateTotals, history, participants, currency }) => {
+  const SALARY_DIGITS = 8,
+    collectSalaries = () => [...document.querySelectorAll('input[id^="amount-"]')].reduce((sum, i) => sum + +i.value, 0);
 
-  collectSalaries = () => [...document.querySelectorAll('input[id^="amount-"]')].reduce((sum, i) => sum + +i.value, 0);
-
-  handleClick = () => {
-    const total = this.collectSalaries(),
+  const handleClick = () => {
+    const total = collectSalaries(),
       // (work hours per day) * (working days per week) * (weeks in a year) * (minutes in an hour) * (seconds in a minute)
       totalWorkedSecondsInYear = 7.5 * 5 * 52.1429 * 60 * 60,
       totalPerSecond = parseFloat((total / totalWorkedSecondsInYear).toFixed(2));
 
-    this.props.updateTotals(total, totalPerSecond);
-    this.props.history.push('/start-meeting');
+    updateTotals(total, totalPerSecond);
+    history.push('/start-meeting');
   };
 
-  handleBackToStart = () => this.props.history.push('/');
+  const handleBackToStart = () => history.push('/');
 
-  handleInput = e => {
+  const handleInput = e => {
     e.target.value = +e.target.value.replace(/[^0-9]/g, '');
-    e.target.value = Math.max(0, +e.target.value).toString().slice(0, this.SALARY_DIGITS);
+    e.target.value = Math.max(0, +e.target.value).toString().slice(0, SALARY_DIGITS);
   };
 
-  render() {
-    const { participants, currency } = this.props,
-      participantsOptions = [...Array(participants).keys()].map(p => {
-        return (
-          <FormControl key={p} fullWidth className="costie-form">
-            <InputLabel htmlFor={'amount-' + p}>Salary {p + 1}</InputLabel>
-            <Input
-              id={'amount-' + p}
-              type="password" pattern="[0-9]{8}" maxLength={this.SALARY_DIGITS} autoComplete="off" onInput={this.handleInput}
-              startAdornment={<InputAdornment position="start">{currency}</InputAdornment>}
-            />
-          </FormControl>
-        );
-      });
+  const participantsOptions = [...Array(participants).keys()].map(p => {
+    return (
+      <FormControl key={p} fullWidth className="costie-form">
+        <InputLabel htmlFor={'amount-' + p}>Salary {p + 1}</InputLabel>
+        <Input
+          id={'amount-' + p}
+          type="password" pattern="[0-9]{8}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}
+          startAdornment={<InputAdornment position="start">{currency}</InputAdornment>}
+        />
+      </FormControl>
+    );
+  });
 
-    return participantsOptions.length ? (
+  return participantsOptions.length ? (
+    <React.Fragment>
+      {participantsOptions}
+      <div className="step-nav">
+        <Button variant="outlined" className="outlined push-left normalise-left" onClick={handleBackToStart}>
+          <NavigateBefore className="before" /> Back
+          </Button>
+        <Button variant="contained" onClick={handleClick} className="push-right normalise-right">
+          Next <NavigateNext className="next" />
+        </Button>
+      </div>
+    </React.Fragment>
+  ) : (
       <React.Fragment>
-        {participantsOptions}
-        <div className="step-nav">
-          <Button variant="outlined" className="outlined push-left normalise-left" onClick={this.handleBackToStart}>
-            <NavigateBefore className="before" /> Back
+        <div className="costie-form">Please select a number of participants.</div>
+        <Button variant="contained" onClick={handleBackToStart} className="normalise-left">
+          <NavigateBefore className="before" /> Back
           </Button>
-          <Button variant="contained" onClick={this.handleClick} className="push-right normalise-right">
-            Next <NavigateNext className="next" />
-          </Button>
-        </div>
       </React.Fragment>
-    ) : (
-        <React.Fragment>
-          <div className="costie-form">Please select a number of participants.</div>
-          <Button variant="contained" onClick={this.handleBackToStart} className="normalise-left">
-            <NavigateBefore className="before" /> Back
-          </Button>
-        </React.Fragment>
-      );
-  }
-}
+    );
+};
 
 export default Salaries;
