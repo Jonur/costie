@@ -9,7 +9,8 @@ class Meeting extends Component {
     secondsRun: 0,
     secondsDisplay: '00',
     minutesDisplay: '00',
-    hoursDisplay: '00'
+    hoursDisplay: '00',
+    button: 'begin'
   };
 
   handleBackToStart = () => this.props.history.push('/');
@@ -31,8 +32,7 @@ class Meeting extends Component {
       this.updateDisplayAmount(totalPerSecond);
     }.bind(this), 1000);
 
-    document.getElementById('begin-timer').classList.add('hidden');
-    document.getElementById('end-timer').classList.remove('hidden');
+    this.setState({ button: 'end' });
   };
 
   endTimer = () => {
@@ -41,8 +41,7 @@ class Meeting extends Component {
       this.timeout = null;
     }
 
-    document.getElementById('end-timer').classList.add('hidden');
-    document.getElementById('new-meeting').classList.remove('hidden');
+    this.setState({ button: 'new' });
   };
 
   componentWillUnmount() {
@@ -60,9 +59,9 @@ class Meeting extends Component {
         <Typography component="h2" variant="h5" align="center" className="timer">
           {this.state.hoursDisplay}:{this.state.minutesDisplay}:{this.state.secondsDisplay}
         </Typography>
-        <Button variant="contained" onClick={this.beginTimer} id="begin-timer">Start</Button>
-        <Button variant="contained" onClick={this.endTimer} id="end-timer" className="hidden">End</Button>
-        <Button variant="contained" onClick={this.handleBackToStart} id="new-meeting" className="hidden">New</Button>
+        {this.state.button === 'begin' && <Button variant="contained" onClick={this.beginTimer}>Start</Button>}
+        {this.state.button === 'end' && <Button variant="contained" onClick={this.endTimer}>End</Button>}
+        {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>New</Button>}
       </div>
     ) : (
         <React.Fragment>
