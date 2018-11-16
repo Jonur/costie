@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import NavigateBefore from '@material-ui/icons/NavigateBefore';
@@ -80,6 +81,14 @@ class Meeting extends Component {
         </React.Fragment>
       );
   }
+};
+
+Meeting.propTypes = {
+  currency: PropTypes.string,
+  totalPerSecond: PropTypes.number,
+  history: PropTypes.object,
+  location: PropTypes.object,
+  match: PropTypes.object
 };
 
 export default Meeting;

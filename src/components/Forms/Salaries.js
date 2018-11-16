@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -61,6 +62,15 @@ const Salaries = ({ updateTotals, history, participants, currency }) => {
           </Button>
       </React.Fragment>
     );
+};
+
+Salaries.propTypes = {
+  currency: PropTypes.string,
+  participants: PropTypes.number,
+  updateTotals: PropTypes.func,
+  history: PropTypes.object,
+  location: PropTypes.object,
+  match: PropTypes.object
 };
 
 export default Salaries;

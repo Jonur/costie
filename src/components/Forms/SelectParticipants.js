@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -23,6 +24,15 @@ const SelectParticipants = ({ participants, selected, handleChange, history }) =
       </Button>
     </React.Fragment>
   );
+};
+
+SelectParticipants.propTypes = {
+  participants: PropTypes.array,
+  selected: PropTypes.number,
+  handleChange: PropTypes.func,
+  history: PropTypes.object,
+  location: PropTypes.object,
+  match: PropTypes.object
 };
 
 export default SelectParticipants;
