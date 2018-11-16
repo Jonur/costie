@@ -16,6 +16,8 @@ class Meeting extends Component {
 
   handleBackToStart = () => this.props.history.push('/');
 
+  handleBackToSalaries = () => this.props.history.push('/salaries');
+
   updateDisplayAmount = (totalPerSecond = 0) => {
     let displayAmount = (+this.state.displayAmount + totalPerSecond).toFixed(2),
       secondsRun = +this.state.secondsRun + 1,
@@ -71,8 +73,8 @@ class Meeting extends Component {
       </div>
     ) : (
         <React.Fragment>
-          <div className="costie-form">Please select a number of participants.</div>
-          <Button variant="contained" onClick={this.handleBackToStart} className="push-right normalise-left">
+          <div className="costie-form">Please enter valid salaries.</div>
+          <Button variant="contained" onClick={this.handleBackToSalaries} className="push-right normalise-left">
             <NavigateBefore className="before" /> Back
           </Button>
         </React.Fragment>
