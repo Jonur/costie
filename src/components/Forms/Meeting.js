@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import NavigateBefore from '@material-ui/icons/NavigateBefore';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 class Meeting extends Component {
   state = {
@@ -59,9 +66,44 @@ class Meeting extends Component {
         <Typography component="h2" variant="h5" align="center" className="timer">
           {this.state.hoursDisplay}:{this.state.minutesDisplay}:{this.state.secondsDisplay}
         </Typography>
+
         {this.state.button === 'begin' && <Button variant="contained" onClick={this.beginTimer}>Start</Button>}
         {this.state.button === 'end' && <Button variant="contained" onClick={this.endTimer}>End</Button>}
         {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>New</Button>}
+
+        <ExpansionPanel>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>Cost Breakdown</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <List>
+              <ListItem>
+                <ListItemText
+                  primary="15 mins"
+                  secondary={this.props.currency + this.props.totalPerSecond * 900}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="30 mins"
+                  secondary={this.props.currency + +this.props.totalPerSecond * 1800}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="1 hour"
+                  secondary={this.props.currency + +this.props.totalPerSecond * 3600}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="2 hours"
+                  secondary={this.props.currency + +this.props.totalPerSecond * 7200}
+                />
+              </ListItem>
+            </List>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
       </div>
     ) : (
         <React.Fragment>

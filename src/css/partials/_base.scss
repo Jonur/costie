@@ -69,4 +69,19 @@ body {
       margin-left: 5px;
     }
   }
+
+  div[class*="MuiExpansionPanel-"] {
+    box-shadow: none;
+    border: 0;
+    margin-top: 35px;
+    border-top: 1px solid $costie-grey-light;
+
+    &:before {
+      background-color: $costie-grey-light;
+    }
+  }
+
+  div[class*="MuiExpansionPanelDetails-"] {
+    padding: 0;
+  }
 }
