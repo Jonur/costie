@@ -25,7 +25,7 @@ const SelectParticipants = ({ history }) => {
                 {participantsOptions}
               </NativeSelect>
             </FormControl>
-            <Button variant="contained" onClick={handleClick} className="normalise-right">
+            <Button variant="contained" className="normalise-right" disabled={participants.selected < 2} onClick={handleClick}>
               {context.dictionary.buttonNext} <NavigateNext className="next" />
             </Button>
           </React.Fragment>

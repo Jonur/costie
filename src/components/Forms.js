@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import SelectParticipants from './Forms/SelectParticipants';
 import Salaries from './Forms/Salaries';
 import Meeting from './Forms/Meeting';
+import Loop from '@material-ui/icons/Loop';
 
 const Forms = () => {
   return (
@@ -16,6 +17,7 @@ const Forms = () => {
             <React.Fragment>
               <Button variant="fab" aria-label="Currency" className="currency" onClick={changeCurrency}>
                 {context.currencies.selected}
+                <Loop className="loop" />
               </Button>
               <Switch>
                 <Route path="/" exact component={SelectParticipants} />

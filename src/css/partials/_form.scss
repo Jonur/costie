@@ -6,6 +6,17 @@
     background-color: $costie-blue;
     font-size: 3.25rem;
     color: $costie-white;
+
+    > span[class*="MuiButton-label-"] {
+      margin-top: -15px;
+
+      > svg.loop {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        font-size: 1rem;
+      }
+    }
   }
 
   .step-nav {
