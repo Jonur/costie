@@ -17,6 +17,24 @@
   "notificationParticipants": "Please select a number of participants.",
   "notificationSalaries": "Please enter valid salaries."
  },
+ "Deutsch": {
+  "header": "Costie",
+  "subheader": "Zeit ist Geld.",
+  "labelNumberOfParticipants": "Anzahl der Teilnehmer",
+  "labelSalary": "Gehalt",
+  "labelCostBreakdown": "Kostenaufschlüsselung",
+  "labelCostBreakdown15mins": "15 Minuten",
+  "labelCostBreakdown30mins": "30 Minuten",
+  "labelCostBreakdown60mins": "1 Stunde",
+  "labelCostBreakdown120mins": "2 Stunden",
+  "buttonNext": "Weiter",
+  "buttonBack": "Zurück",
+  "buttonStart": "Start",
+  "buttonNew": "Neu",
+  "buttonEnd": "Ende",
+  "notificationParticipants": "Bitte wählen Sie die Anzahl der Teilnehmer aus.",
+  "notificationSalaries": "Bitte tragen Sie gültige Gehälter ein."
+ },
  "Français": {
   "header": "Costie",
   "subheader": "Le temps c'est de l'argent.",
