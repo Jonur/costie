@@ -12,7 +12,7 @@ The application has calculated the meeting cost per second based on the sum of t
 
 This project was inspired by the following [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk)'s 2015 [Tweet](https://twitter.com/boredelonmusk/status/588750177084669952?lang=en):
 
-<center><a href="https://imgur.com/uJy27hg"><img src="https://i.imgur.com/uJy27hg.png" title="source: imgur.com" /></a></center>
+<a href="https://imgur.com/uJy27hg"><img src="https://i.imgur.com/uJy27hg.png" title="Elon Musk's tweet" /></a>
 
 # Build
 
