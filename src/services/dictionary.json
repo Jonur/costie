@@ -17,6 +17,24 @@
   "notificationParticipants": "Please select a number of participants.",
   "notificationSalaries": "Please enter valid salaries."
  },
+ "french": {
+  "header": "Costie",
+  "subheader": "Le temps c'est de l'argent.",
+  "labelNumberOfParticipants": "Nombre de participants",
+  "labelSalary": "Salaire",
+  "labelCostBreakdown": "Coût des sets",
+  "labelCostBreakdown15mins": "15 mins",
+  "labelCostBreakdown30mins": "30 mins",
+  "labelCostBreakdown60mins": "1 heure",
+  "labelCostBreakdown120mins": "2 heures",
+  "buttonNext": "Suivant",
+  "buttonBack": "Retour",
+  "buttonStart": "Démarrer",
+  "buttonNew": "Nouveau",
+  "buttonEnd": "Terminer",
+  "notificationParticipants": "Veuillez sélectionner un nombre de participants.",
+  "notificationSalaries": "Veuillez entrer les salaires valides."
+ },
  "greek": {
   "header": "Costie",
   "subheader": "Ο χρόνος είναι χρήμα.",
