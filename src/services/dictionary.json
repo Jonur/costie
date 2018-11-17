@@ -1,10 +1,14 @@
 {
  "english": {
   "header": "Costie",
-  "subheader": "Time is money."
+  "subheader": "Time is money.",
+  "labelNumberOfParticipants": "Number of participants",
+  "buttonNext": "Next"
  },
  "greek": {
   "header": "Costie",
-  "subheader": "Ο χρόνος είναι χρήμα."
+  "subheader": "Ο χρόνος είναι χρήμα.",
+  "labelNumberOfParticipants": "Αριθμός συμμετεχόντων",
+  "buttonNext": "Επομενο"
  }
 }

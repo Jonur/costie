@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Consumer from '../../CostieProvider';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -7,32 +7,32 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import Input from '@material-ui/core/Input';
 import NavigateNext from '@material-ui/icons/NavigateNext';
 
-const SelectParticipants = ({ participants, selected, handleChange, history }) => {
-  const handleClick = () => history.push('/salaries'),
-    participantsOptions = participants.map(p => p >= 2 ? <option value={p} key={p}>{p}</option> : false);
+const SelectParticipants = ({ history }) => {
+  const handleClick = () => history.push('/salaries');
 
   return (
-    <React.Fragment>
-      <FormControl fullWidth className="costie-form">
-        <InputLabel htmlFor="participants">Number of participants</InputLabel>
-        <NativeSelect defaultValue={selected} input={<Input name="participants" id="participants" />} onChange={handleChange}>
-          {participantsOptions}
-        </NativeSelect>
-      </FormControl>
-      <Button variant="contained" onClick={handleClick} className="normalise-right">
-        Next <NavigateNext className="next" />
-      </Button>
-    </React.Fragment>
-  );
-};
+    <Consumer>
+      {({ context, updateParticipants }) => {
+        const participants = context.participants,
+          participantsOptions = participants.options.map(p => p >= 2 ? <option value={p} key={p}>{p}</option> : false)
 
-SelectParticipants.propTypes = {
-  participants: PropTypes.array,
-  selected: PropTypes.number,
-  handleChange: PropTypes.func,
-  history: PropTypes.object,
-  location: PropTypes.object,
-  match: PropTypes.object
+        return (
+          <React.Fragment>
+            <FormControl fullWidth className="costie-form">
+              <InputLabel htmlFor="participants">{context.dictionary.labelNumberOfParticipants}</InputLabel>
+              <NativeSelect defaultValue={participants.selected} input={<Input name="participants" id="participants" />}
+                onChange={updateParticipants}>
+                {participantsOptions}
+              </NativeSelect>
+            </FormControl>
+            <Button variant="contained" onClick={handleClick} className="normalise-right">
+              {context.dictionary.buttonNext} <NavigateNext className="next" />
+            </Button>
+          </React.Fragment>
+        );
+      }}
+    </Consumer>
+  );
 };
 
 export default SelectParticipants;
