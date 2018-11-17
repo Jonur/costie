@@ -35,6 +35,24 @@
   "notificationParticipants": "Veuillez sélectionner un nombre de participants.",
   "notificationSalaries": "Veuillez entrer les salaires valides."
  },
+ "Español": {
+  "header": "Costie",
+  "subheader": "El tiempo es oro.",
+  "labelNumberOfParticipants": "Número de participantes",
+  "labelSalary": "Salario",
+  "labelCostBreakdown": "desglose del costo",
+  "labelCostBreakdown15mins": "15 mins",
+  "labelCostBreakdown30mins": "30 mins",
+  "labelCostBreakdown60mins": "1 hora",
+  "labelCostBreakdown120mins": "2 horas",
+  "buttonNext": "Siguiente",
+  "buttonBack": "Atrás",
+  "buttonStart": "Iniciar",
+  "buttonNew": "Nuevo",
+  "buttonEnd": "Terminar",
+  "notificationParticipants": "Por favor seleccione el número de participantes.",
+  "notificationSalaries": "Por favor introduzca un salario válido."
+ },
  "Magyar": {
   "header": "Costie",
   "subheader": "Az idő pénz.",
