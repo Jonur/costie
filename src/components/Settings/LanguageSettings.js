@@ -46,6 +46,13 @@ class LanguageSettings extends Component {
                     </ListItemIcon>}
                   <ListItemText inset primary="Français" />
                 </ListItem>
+                <ListItem component="li" id="magyar" button onClick={handleChangeLanguage}>
+                  {context.language === 'magyar' &&
+                    <ListItemIcon>
+                      <Done />
+                    </ListItemIcon>}
+                  <ListItemText inset primary="Magyar" />
+                </ListItem>
                 <ListItem component="li" id="greek" button onClick={handleChangeLanguage}>
                   {context.language === 'greek' &&
                     <ListItemIcon>

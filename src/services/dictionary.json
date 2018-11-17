@@ -35,6 +35,24 @@
   "notificationParticipants": "Veuillez sélectionner un nombre de participants.",
   "notificationSalaries": "Veuillez entrer les salaires valides."
  },
+ "magyar": {
+  "header": "Costie",
+  "subheader": "Az idő pénz.",
+  "labelNumberOfParticipants": "Résztvevők száma",
+  "labelSalary": "Fizetés",
+  "labelCostBreakdown": "Költségek részletezése",
+  "labelCostBreakdown15mins": "15 perc",
+  "labelCostBreakdown30mins": "30 perc",
+  "labelCostBreakdown60mins": "1 óra",
+  "labelCostBreakdown120mins": "2 óra",
+  "buttonNext": "Következő",
+  "buttonBack": "Vissza",
+  "buttonStart": "Inditás",
+  "buttonNew": "Új",
+  "buttonEnd": "Vége",
+  "notificationParticipants": "Adja meg a résztvevők számát.",
+  "notificationSalaries": "Adja meg a fizetési igényét."
+ },
  "greek": {
   "header": "Costie",
   "subheader": "Ο χρόνος είναι χρήμα.",
