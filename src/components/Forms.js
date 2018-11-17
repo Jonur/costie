@@ -18,9 +18,9 @@ const Forms = () => {
                 {context.currencies.selected}
               </Button>
 
-              <Route exact path="/" component={SelectParticipants} />
+              <Route path="/" exact component={SelectParticipants} />
               <Route path="/salaries" component={Salaries} />
-              <Route exact path="/start-meeting" component={Meeting} />
+              <Route path="/start-meeting" component={Meeting} />
             </React.Fragment>
           )}
         </Consumer>

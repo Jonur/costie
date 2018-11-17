@@ -72,7 +72,7 @@ class Meeting extends Component {
               {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>
                 {context.dictionary.buttonNew}</Button>}
 
-              <Breakdown currency={context.currencies.selected} totalPerSecond={context.totalPerSecond} />
+              <Breakdown />
             </div>
           ) : (
               <React.Fragment>

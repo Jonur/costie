@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Consumer from '../../CostieProvider';
 import Typography from '@material-ui/core/Typography';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -9,39 +9,61 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const Breakdown = ({ currency, totalPerSecond }) => {
-  return (
-    <ExpansionPanel>
-      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-        <Typography>Cost Breakdown</Typography>
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        <List>
-          <ListItem>
-            <ListItemText primary="15 mins" secondary={currency + +totalPerSecond * 900}
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="30 mins" secondary={currency + +totalPerSecond * 1800}
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="1 hour" secondary={currency + +totalPerSecond * 3600}
-            />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="2 hours" secondary={currency + +totalPerSecond * 7200}
-            />
-          </ListItem>
-        </List>
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
-  );
-};
+class Breakdown extends Component {
+  DURATION_15_MINS = 900;
+  DURATION_30_MINS = 1800;
+  DURATION_60_MINS = 3600;
+  DURATION_120_MINS = 7200;
 
-Breakdown.propTypes = {
-  currency: PropTypes.string,
-  totalPerSecond: PropTypes.number
+  durationCost = (currency, costPerSecond, duration) => `${currency} ${Math.floor(costPerSecond * duration)}`;
+
+  render() {
+    return (
+      <Consumer>
+        {({ context }) => {
+          const { totalPerSecond } = context,
+            currency = context.currencies.selected;
+
+          return (
+            <ExpansionPanel>
+              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>{context.dictionary.labelCostBreakdown}</Typography>
+              </ExpansionPanelSummary>
+              <ExpansionPanelDetails>
+                <List>
+                  <ListItem>
+                    <ListItemText
+                      primary={context.dictionary.labelCostBreakdown15mins}
+                      secondary={this.durationCost(currency, totalPerSecond, this.DURATION_15_MINS)}
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemText
+                      primary={context.dictionary.labelCostBreakdown30mins}
+                      secondary={this.durationCost(currency, totalPerSecond, this.DURATION_30_MINS)}
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemText
+                      primary={context.dictionary.labelCostBreakdown60mins}
+                      secondary={this.durationCost(currency, totalPerSecond, this.DURATION_60_MINS)}
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemText
+                      primary={context.dictionary.labelCostBreakdown120mins}
+                      secondary={this.durationCost(currency, totalPerSecond, this.DURATION_120_MINS)}
+                    />
+                  </ListItem>
+                </List>
+              </ExpansionPanelDetails>
+            </ExpansionPanel>
+          );
+        }}
+      </Consumer>
+
+    );
+  };
 };
 
 export default Breakdown;
