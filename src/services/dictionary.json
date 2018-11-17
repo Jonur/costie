@@ -71,6 +71,24 @@
   "notificationParticipants": "Por favor seleccione el número de participantes.",
   "notificationSalaries": "Por favor introduzca un salario válido."
  },
+ "Português": {
+  "header": "Costie",
+  "subheader": "Tempo é dinheiro.",
+  "labelNumberOfParticipants": "Número de participantes",
+  "labelSalary": "Salário",
+  "labelCostBreakdown": "Custo",
+  "labelCostBreakdown15mins": "15 minutos",
+  "labelCostBreakdown30mins": "30 minutos",
+  "labelCostBreakdown60mins": "1 horas",
+  "labelCostBreakdown120mins": "2 horas",
+  "buttonNext": "Próximo",
+  "buttonBack": "Anterior",
+  "buttonStart": "Começar",
+  "buttonNew": "Novo",
+  "buttonEnd": "Fim",
+  "notificationParticipants": "Por favor selecione o número de particiantes.",
+  "notificationSalaries": "Por favor entre salários válidos."
+ },
  "Magyar": {
   "header": "Costie",
   "subheader": "Az idő pénz.",
