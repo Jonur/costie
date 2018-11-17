@@ -17,7 +17,7 @@ class CostieProvider extends Component {
       selected: '£'
     },
     language: 'English',
-    languages: ['English', 'Français', 'Español', 'Magyar', 'Ελληνικά'],
+    languages: ['English'],
     dictionary: {},
     settingsView: false
   };
@@ -49,7 +49,10 @@ class CostieProvider extends Component {
   toggleSettings = () => this.state.settingsView ? this.setState({ settingsView: false }) : this.setState({ settingsView: true });
 
   componentDidMount() {
-    this.setState({ dictionary: Dictionary[this.state.language] });
+    this.setState({
+      dictionary: Dictionary[this.state.language],
+      languages: Object.keys(Dictionary)
+    });
   };
 
   render() {
