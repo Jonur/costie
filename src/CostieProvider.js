@@ -16,7 +16,8 @@ class CostieProvider extends Component {
       options: [...'£€$₽¥₩₹'],
       selected: '£'
     },
-    language: 'english',
+    language: 'English',
+    languages: ['English', 'Français', 'Magyar', 'Ελληνικά'],
     dictionary: {},
     settingsView: false
   };

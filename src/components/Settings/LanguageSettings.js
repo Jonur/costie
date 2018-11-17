@@ -29,40 +29,27 @@ class LanguageSettings extends Component {
         </ListItem>
 
         <Consumer>
-          {({ context, handleChangeLanguage }) => (
-            <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-              <List component="ul" disablePadding>
-                <ListItem component="li" id="english" button onClick={handleChangeLanguage}>
-                  {context.language === 'english' &&
+          {({ context, handleChangeLanguage }) => {
+            const languagesDOM = context.languages.map((lang, index) => {
+              return (
+                <ListItem key={index} component="li" id={lang} button onClick={handleChangeLanguage}>
+                  {context.language === lang &&
                     <ListItemIcon>
                       <Done />
                     </ListItemIcon>}
-                  <ListItemText inset primary="English" />
+                  <ListItemText inset primary={lang} />
                 </ListItem>
-                <ListItem component="li" id="french" button onClick={handleChangeLanguage}>
-                  {context.language === 'french' &&
-                    <ListItemIcon>
-                      <Done />
-                    </ListItemIcon>}
-                  <ListItemText inset primary="Français" />
-                </ListItem>
-                <ListItem component="li" id="magyar" button onClick={handleChangeLanguage}>
-                  {context.language === 'magyar' &&
-                    <ListItemIcon>
-                      <Done />
-                    </ListItemIcon>}
-                  <ListItemText inset primary="Magyar" />
-                </ListItem>
-                <ListItem component="li" id="greek" button onClick={handleChangeLanguage}>
-                  {context.language === 'greek' &&
-                    <ListItemIcon>
-                      <Done />
-                    </ListItemIcon>}
-                  <ListItemText inset primary="Ελληνικά" />
-                </ListItem>
-              </List>
-            </Collapse>
-          )}
+              );
+            });
+
+            return (
+              <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+                <List component="ul" disablePadding>
+                  {languagesDOM}
+                </List>
+              </Collapse>
+            );
+          }}
         </Consumer>
 
       </List>

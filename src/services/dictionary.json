@@ -1,5 +1,5 @@
 {
- "english": {
+ "English": {
   "header": "Costie",
   "subheader": "Time is money.",
   "labelNumberOfParticipants": "Number of participants",
@@ -17,7 +17,7 @@
   "notificationParticipants": "Please select a number of participants.",
   "notificationSalaries": "Please enter valid salaries."
  },
- "french": {
+ "Français": {
   "header": "Costie",
   "subheader": "Le temps c'est de l'argent.",
   "labelNumberOfParticipants": "Nombre de participants",
@@ -35,7 +35,7 @@
   "notificationParticipants": "Veuillez sélectionner un nombre de participants.",
   "notificationSalaries": "Veuillez entrer les salaires valides."
  },
- "magyar": {
+ "Magyar": {
   "header": "Costie",
   "subheader": "Az idő pénz.",
   "labelNumberOfParticipants": "Résztvevők száma",
@@ -53,7 +53,7 @@
   "notificationParticipants": "Adja meg a résztvevők számát.",
   "notificationSalaries": "Adja meg a fizetési igényét."
  },
- "greek": {
+ "Ελληνικά": {
   "header": "Costie",
   "subheader": "Ο χρόνος είναι χρήμα.",
   "labelNumberOfParticipants": "Αριθμός συμμετεχόντων",
