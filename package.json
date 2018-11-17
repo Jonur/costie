@@ -2,7 +2,6 @@
   "name": "costie",
   "version": "0.1.0",
   "description": "A meeting cost time-calculator based on the participants' salaries.",
-  "homepage": "https://github.com/Jonur/costie#readme",
   "bugs": {
     "url": "https://github.com/Jonur/costie/issues",
     "email": "d.k.damilos@gmail.com"
@@ -29,6 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "now-build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

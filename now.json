@@ -1,6 +1,6 @@
 {
  "version": 2,
- "name": "create-react-app",
+ "name": "costie",
  "builds": [
   {
    "src": "package.json",
