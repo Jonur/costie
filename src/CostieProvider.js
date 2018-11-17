@@ -51,7 +51,7 @@ class CostieProvider extends Component {
   componentDidMount() {
     this.setState({
       dictionary: Dictionary[this.state.language],
-      languages: Object.keys(Dictionary)
+      languages: Object.keys(Dictionary).sort()
     });
   };
 

@@ -65,6 +65,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Translations
 
-[Santiago Eliard](https://github.com/seliardwb) (Spanish)
-
-Zoltán Tóth (Hungarian)
+Alex (German), [Santiago Eliard](https://github.com/seliardwb) (Spanish), Zoltán Tóth (Hungarian)
