@@ -3,12 +3,18 @@
   "header": "Costie",
   "subheader": "Time is money.",
   "labelNumberOfParticipants": "Number of participants",
-  "buttonNext": "Next"
+  "labelSalary": "Salary",
+  "buttonNext": "Next",
+  "buttonBack": "Back",
+  "notificationParticipants": "Please select a number of participants."
  },
  "greek": {
   "header": "Costie",
   "subheader": "Ο χρόνος είναι χρήμα.",
   "labelNumberOfParticipants": "Αριθμός συμμετεχόντων",
-  "buttonNext": "Επομενο"
+  "labelSalary": "Μισθός",
+  "buttonNext": "Επομενο",
+  "buttonBack": "Πισω",
+  "notificationParticipants": "Επιλέξτε αριθμό συμμετεχόντων."
  }
 }

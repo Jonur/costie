@@ -41,13 +41,12 @@ class CostieProvider extends Component {
     this.setState(newState);
   };
 
-  toggleSettings = () => this.state.settingsView ? this.setState({ settingsView: false }) : this.setState({ settingsView: true });
-
   handleChangeLanguage = e => {
     const language = e.target.closest('li').id;
-
     this.setState({ language, dictionary: Dictionary[language] });
   };
+
+  toggleSettings = () => this.state.settingsView ? this.setState({ settingsView: false }) : this.setState({ settingsView: true });
 
   componentDidMount() {
     this.setState({ dictionary: Dictionary[this.state.language] });
