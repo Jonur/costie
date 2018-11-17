@@ -1,6 +1,8 @@
 .settings {
-  position: fixed;
-  height: 100vh;
+  position: relative;
+  max-width: 200px;
+  float: right;
+  height: 100%;
   right: 0;
   top: 0;
   z-index: 20;

@@ -1,3 +1,12 @@
+@media screen and (min-height: 568px) {
+  .settings.expanded {
+    position: fixed;
+    height: 100vh;
+    max-width: none;
+    float: none;
+  }
+}
+
 @media screen and (min-height: 768px) {
   .app {
     background: none;
