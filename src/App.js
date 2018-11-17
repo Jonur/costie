@@ -9,9 +9,7 @@ class App extends Component {
   render() {
     return (
       <CostieProvider>
-        <div className="settings">
-          <AppSettings />
-        </div>
+        <AppSettings />
         <div className="app">
           <Titles />
           <Forms />

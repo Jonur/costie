@@ -7,8 +7,11 @@
   text-align: right;
   padding: 32px 0 0 0;
   background-color: $costie-black;
-  box-shadow: 0px 1px 5px 0px $costie-black, 0px 2px 2px 0px $costie-black, 0px 3px 1px -2px $costie-black;
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
+
+  &.expanded {
+    box-shadow: 0px 1px 5px 0px $costie-black, 0px 2px 2px 0px $costie-black, 0px 3px 1px -2px $costie-black;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
 
   > svg {
     position: absolute;

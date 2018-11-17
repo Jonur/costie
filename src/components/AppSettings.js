@@ -8,10 +8,10 @@ class AppSettings extends Component {
     return (
       <Consumer>
         {({ context, toggleSettings }) => (
-          <React.Fragment>
+          <div className={context.settingsView ? 'settings expanded' : 'settings'}>
             <Settings onClick={toggleSettings} />
             {context.settingsView && <LanguageSettings />}
-          </React.Fragment>
+          </div>
         )}
       </Consumer>
     );
