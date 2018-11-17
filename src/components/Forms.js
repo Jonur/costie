@@ -12,7 +12,7 @@ const Forms = () => {
     <Router>
       <Card className="centered-card form">
         <Consumer>
-          {({ context, changeCurrency, updateTotals }) => (
+          {({ context, changeCurrency }) => (
             <React.Fragment>
               <Button variant="fab" aria-label="Currency" className="currency" onClick={changeCurrency}>
                 {context.currencies.selected}
@@ -20,8 +20,7 @@ const Forms = () => {
 
               <Route exact path="/" component={SelectParticipants} />
               <Route path="/salaries" component={Salaries} />
-              <Route exact path="/start-meeting"
-                render={props => <Meeting {...props} totalPerSecond={context.totalPerSecond} currency={context.currencies.selected} />} />
+              <Route exact path="/start-meeting" component={Meeting} />
             </React.Fragment>
           )}
         </Consumer>

@@ -28,7 +28,7 @@ const Salaries = ({ history }) => {
             totalWorkedSecondsInYear = 7.5 * 5 * 52.1429 * 60 * 60,
             totalPerSecond = parseFloat((total / totalWorkedSecondsInYear).toFixed(2));
 
-          updateTotals(total, totalPerSecond);
+          updateTotals(totalPerSecond);
           history.push('/start-meeting');
         };
 

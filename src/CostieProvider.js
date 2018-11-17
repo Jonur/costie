@@ -7,7 +7,6 @@ class CostieProvider extends Component {
   MAX_PARTICIPANTS = 20;
 
   state = {
-    total: 0,
     totalPerSecond: 0,
     participants: {
       options: [...Array(this.MAX_PARTICIPANTS + 1).keys()],
@@ -22,7 +21,7 @@ class CostieProvider extends Component {
     settingsView: false
   };
 
-  updateTotals = (total, totalPerSecond) => this.setState({ total, totalPerSecond });
+  updateTotals = totalPerSecond => this.setState({ totalPerSecond });
 
   updateParticipants = e => {
     const newState = this.state;

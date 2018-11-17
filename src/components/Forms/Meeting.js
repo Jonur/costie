@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import Consumer from '../../CostieProvider';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import NavigateBefore from '@material-ui/icons/NavigateBefore';
@@ -29,9 +29,7 @@ class Meeting extends Component {
     this.setState({ displayAmount, secondsRun, secondsDisplay, minutesDisplay, hoursDisplay });
   };
 
-  beginTimer = () => {
-    const { totalPerSecond } = this.props;
-
+  beginTimer = totalPerSecond => {
     this.timeout = setInterval(function () {
       this.updateDisplayAmount(totalPerSecond);
     }.bind(this), 1000);
@@ -55,40 +53,39 @@ class Meeting extends Component {
   }
 
   render() {
-    const { currency, totalPerSecond } = this.props;
+    return (
+      <Consumer>
+        {({ context }) => {
+          return context.totalPerSecond > 0 ? (
+            <div className="costie-form">
+              <Typography component="h1" variant="h3" align="center">
+                {context.currencies.selected}{this.state.displayAmount}
+              </Typography>
+              <Typography component="h2" variant="h5" align="center" className="timer">
+                {this.state.hoursDisplay}:{this.state.minutesDisplay}:{this.state.secondsDisplay}
+              </Typography>
 
-    return totalPerSecond > 0 ? (
-      <div className="costie-form">
-        <Typography component="h1" variant="h3" align="center">
-          {currency}{this.state.displayAmount}
-        </Typography>
-        <Typography component="h2" variant="h5" align="center" className="timer">
-          {this.state.hoursDisplay}:{this.state.minutesDisplay}:{this.state.secondsDisplay}
-        </Typography>
+              {this.state.button === 'begin' && <Button variant="contained" onClick={() => this.beginTimer(context.totalPerSecond)}>
+                {context.dictionary.buttonStart}</Button>}
+              {this.state.button === 'end' && <Button variant="contained" onClick={this.endTimer}>
+                {context.dictionary.buttonEnd}</Button>}
+              {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>
+                {context.dictionary.buttonNew}</Button>}
 
-        {this.state.button === 'begin' && <Button variant="contained" onClick={this.beginTimer}>Start</Button>}
-        {this.state.button === 'end' && <Button variant="contained" onClick={this.endTimer}>End</Button>}
-        {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>New</Button>}
-
-        <Breakdown currency={currency} totalPerSecond={totalPerSecond} />
-      </div>
-    ) : (
-        <React.Fragment>
-          <div className="costie-form">Please enter valid salaries.</div>
-          <Button variant="contained" onClick={this.handleBackToSalaries} className="push-right normalise-left">
-            <NavigateBefore className="before" /> Back
-          </Button>
-        </React.Fragment>
-      );
-  }
-};
-
-Meeting.propTypes = {
-  currency: PropTypes.string,
-  totalPerSecond: PropTypes.number,
-  history: PropTypes.object,
-  location: PropTypes.object,
-  match: PropTypes.object
+              <Breakdown currency={context.currencies.selected} totalPerSecond={context.totalPerSecond} />
+            </div>
+          ) : (
+              <React.Fragment>
+                <div className="costie-form">{context.dictionary.notificationSalaries}</div>
+                <Button variant="contained" onClick={this.handleBackToSalaries} className="push-right normalise-left">
+                  <NavigateBefore className="before" /> {context.dictionary.buttonBack}
+                </Button>
+              </React.Fragment>
+            );
+        }}
+      </Consumer>
+    );
+  };
 };
 
 export default Meeting;
