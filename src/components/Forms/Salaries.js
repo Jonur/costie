@@ -38,7 +38,7 @@ const Salaries = ({ history }) => {
               <InputLabel classes={{ focused: 'focused' }} htmlFor={'amount-' + p}>{context.dictionary.labelSalary} {p + 1}</InputLabel>
               <Input
                 id={'amount-' + p}
-                type="password" pattern="[0-9]{8}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}
+                type="tel" pattern="[0-9]{8}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}
                 startAdornment={<InputAdornment position="start">{context.currencies.selected}</InputAdornment>}
               />
             </FormControl>

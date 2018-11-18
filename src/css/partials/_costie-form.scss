@@ -22,6 +22,11 @@
     label.focused {
       color: $costie-blue-darker;
     }
+
+    input[type="tel"] {
+      font-family: "text-security-disc";
+      -webkit-text-security: disc;
+    }
   }
 
   label {
