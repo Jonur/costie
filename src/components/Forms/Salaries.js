@@ -35,7 +35,7 @@ const Salaries = ({ history }) => {
         const participantsOptions = [...Array(context.participants.selected).keys()].map(p => {
           return (
             <FormControl key={p} fullWidth className="costie-form">
-              <InputLabel htmlFor={'amount-' + p}>{context.dictionary.labelSalary} {p + 1}</InputLabel>
+              <InputLabel classes={{ focused: 'focused' }} htmlFor={'amount-' + p}>{context.dictionary.labelSalary} {p + 1}</InputLabel>
               <Input
                 id={'amount-' + p}
                 type="password" pattern="[0-9]{8}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}

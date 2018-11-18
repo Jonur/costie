@@ -14,6 +14,14 @@
       color: $costie-grey;
       margin: 10px 0 1rem 0;
     }
+
+    > label + div:after {
+      border-bottom: 2px solid $costie-blue;
+    }
+
+    label.focused {
+      color: $costie-blue-darker;
+    }
   }
 
   label {
@@ -27,6 +35,10 @@
       background-color: $costie-black;
       color: $costie-white;
       margin-top: 50px;
+
+      &:hover {
+        background-color: $costie-grey-darker;
+      }
     }
 
     &.outlined {

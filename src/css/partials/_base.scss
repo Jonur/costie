@@ -47,19 +47,7 @@ body {
   }
 
   // MUI Theme overwrites
-  label[class*="MuiFormLabel-focused"] {
-    color: $costie-blue-darker;
-  }
-
-  div[class*="MuiInput-underline-"]:after {
-    border-bottom: 2px solid $costie-blue;
-  }
-
-  button[class*="MuiButton-contained-"]:hover {
-    background-color: $costie-grey-darker;
-  }
-
-  svg[class*="MuiSvgIcon-root"] {
+  svg[role="presentation"] {
     font-size: 20px;
 
     &.before {
@@ -71,18 +59,20 @@ body {
     }
   }
 
-  div[class*="MuiExpansionPanel-"] {
-    box-shadow: none;
-    border: 0;
-    margin-top: 35px;
-    border-top: 1px solid $costie-grey-light;
+  .costie-form {
+    .MuiExpansionPanel {
+      box-shadow: none;
+      border: 0;
+      margin-top: 35px;
+      border-top: 1px solid $costie-grey-light;
 
-    &:before {
-      background-color: $costie-grey-light;
+      &:before {
+        background-color: $costie-grey-light;
+      }
     }
-  }
 
-  div[class*="MuiExpansionPanelDetails-"] {
-    padding: 0;
+    .p0 {
+      padding: 0;
+    }
   }
 }

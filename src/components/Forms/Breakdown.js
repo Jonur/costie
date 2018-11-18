@@ -25,11 +25,11 @@ class Breakdown extends Component {
             currency = context.currencies.selected;
 
           return (
-            <ExpansionPanel>
+            <ExpansionPanel className="MuiExpansionPanel">
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography>{context.dictionary.labelCostBreakdown}</Typography>
               </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
+              <ExpansionPanelDetails className="p0">
                 <List>
                   <ListItem>
                     <ListItemText

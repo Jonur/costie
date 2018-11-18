@@ -27,11 +27,7 @@
   }
 
   // MUI Theme overwrites
-  span[class*="MuiTypography-"] {
+  span {
     color: $costie-white;
-  }
-
-  div[class*="MuiListItemIcon"] {
-    min-width: 24px;
   }
 }

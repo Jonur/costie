@@ -7,7 +7,11 @@
     font-size: 3.25rem;
     color: $costie-white;
 
-    > span[class*="MuiButton-label-"] {
+    &:hover {
+      background-color: $costie-grey-darker;
+    }
+
+    > span:first-of-type {
       margin-top: -15px;
 
       > svg.loop {

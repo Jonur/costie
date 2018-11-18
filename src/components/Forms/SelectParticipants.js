@@ -19,7 +19,7 @@ const SelectParticipants = ({ history }) => {
         return (
           <React.Fragment>
             <FormControl fullWidth className="costie-form">
-              <InputLabel htmlFor="participants">{context.dictionary.labelNumberOfParticipants}</InputLabel>
+              <InputLabel classes={{ focused: 'focused' }} htmlFor="participants">{context.dictionary.labelNumberOfParticipants}</InputLabel>
               <NativeSelect defaultValue={participants.selected} input={<Input name="participants" id="participants" />}
                 onChange={updateParticipants}>
                 {participantsOptions}
