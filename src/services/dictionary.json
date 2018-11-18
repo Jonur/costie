@@ -124,5 +124,23 @@
   "buttonEnd": "Τελος",
   "notificationParticipants": "Επιλέξτε αριθμό συμμετεχόντων.",
   "notificationSalaries": "Εισάγετε έγκυρους μισθούς."
+ },
+ "Dansk": {
+  "header": "Costie",
+  "subheader": "Tid er penge!",
+  "labelNumberOfParticipants": "Deltagerantal",
+  "labelSalary": "Løn",
+  "labelCostBreakdown": "Udgifter i detaljer",
+  "labelCostBreakdown15mins": "15 minutter",
+  "labelCostBreakdown30mins": "30 minutter",
+  "labelCostBreakdown60mins": "1 time",
+  "labelCostBreakdown120mins": "2 timer",
+  "buttonNext": "Næste",
+  "buttonBack": "Tilbage",
+  "buttonStart": "Start",
+  "buttonNew": "Ny",
+  "buttonEnd": "Slut",
+  "notificationParticipants": "Vælg antal af mødedeltagere.",
+  "notificationSalaries": "Indtast jeres lønninger."
  }
 }
