@@ -24,14 +24,19 @@
   }
 
   .step-nav {
+    padding-top: 35px;
     overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-    .push-right {
-      float: right;
-    }
+    .push-right, .push-left {
+      margin-top: 15px;
 
-    .push-left {
-      float: left;
+      button {
+        margin-top: 0;
+      }
     }
   }
 }

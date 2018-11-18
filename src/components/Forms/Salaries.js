@@ -49,12 +49,16 @@ const Salaries = ({ history }) => {
           <React.Fragment>
             {participantsOptions}
             <div className="step-nav">
-              <Button variant="outlined" className="outlined push-left normalise-left" onClick={handleBack}>
-                <NavigateBefore className="before" /> {context.dictionary.buttonBack}
-              </Button>
-              <Button variant="contained" className="push-right normalise-right" onClick={handleNext}>
-                {context.dictionary.buttonNext} <NavigateNext className="next" />
-              </Button>
+              <div className="push-right">
+                <Button variant="contained" className="normalise-right" onClick={handleNext}>
+                  {context.dictionary.buttonNext} <NavigateNext className="next" />
+                </Button>
+              </div>
+              <div className="push-left">
+                <Button variant="outlined" className="outlined normalise-left" onClick={handleBack}>
+                  <NavigateBefore className="before" /> {context.dictionary.buttonBack}
+                </Button>
+              </div>
             </div>
           </React.Fragment>
         ) : (

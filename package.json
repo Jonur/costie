@@ -23,12 +23,13 @@
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "serve": "^10.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "now-build": "react-scripts build",
+    "now-build": "serve --single ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

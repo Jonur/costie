@@ -77,7 +77,7 @@ class Meeting extends Component {
           ) : (
               <React.Fragment>
                 <div className="costie-form">{context.dictionary.notificationSalaries}</div>
-                <Button variant="contained" onClick={this.handleBackToSalaries} className="push-right normalise-left">
+                <Button variant="contained" onClick={this.handleBackToSalaries} className="normalise-left">
                   <NavigateBefore className="before" /> {context.dictionary.buttonBack}
                 </Button>
               </React.Fragment>
