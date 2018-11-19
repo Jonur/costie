@@ -1,6 +1,6 @@
 {
   "name": "costie",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A meeting cost time-calculator based on the participants' salaries.",
   "bugs": {
     "url": "https://github.com/Jonur/costie/issues",

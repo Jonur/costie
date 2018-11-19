@@ -9,14 +9,19 @@ import NavigateBefore from '@material-ui/icons/NavigateBefore';
 import NavigateNext from '@material-ui/icons/NavigateNext';
 
 const Salaries = ({ history }) => {
-  const SALARY_DIGITS = 8,
+  const SALARY_DIGITS = 9,
     collectSalaries = () => [...document.querySelectorAll('input[id^="amount-"]')].reduce((sum, i) => sum + +i.value, 0);
 
   const handleBack = () => history.push('/');
 
   const handleInput = e => {
-    e.target.value = +e.target.value.replace(/[^0-9]/g, '');
-    e.target.value = Math.max(0, +e.target.value).toString().slice(0, SALARY_DIGITS);
+    let value = +e.target.value.replace(/[^0-9]/g, '');
+
+    if (String(e.target.value).match(/\d/g).length > SALARY_DIGITS) {
+      e.target.value = +e.target.value.toString().slice(0, -1);
+    } else {
+      e.target.value = value ? value : '';
+    }
   };
 
   return (
@@ -38,7 +43,7 @@ const Salaries = ({ history }) => {
               <InputLabel classes={{ focused: 'focused' }} htmlFor={'amount-' + p}>{context.dictionary.labelSalary} {p + 1}</InputLabel>
               <Input
                 id={'amount-' + p}
-                type="tel" pattern="[0-9]{8}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}
+                type="tel" pattern="[0-9]{9}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}
                 startAdornment={<InputAdornment position="start">{context.currencies.selected}</InputAdornment>}
               />
             </FormControl>
