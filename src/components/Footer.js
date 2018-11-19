@@ -4,7 +4,9 @@ const Footer = () => {
   const year = (new Date()).getFullYear();
 
   return (
-    <footer>&copy;{year} - <a rel="noopener noreferrer" target="_blank" href="https://github.com/Jonur">Jonur</a></footer>
+    <footer>
+      &copy;{year} - <a rel="noopener noreferrer" target="_blank" href="https://github.com/Jonur">Jonur</a> - <a rel="noopener noreferrer" target="_blank" href="https://github.com/Jonur/costie/blob/master/PrivacyPolicy.md">Privacy Policy</a>
+    </footer>
   );
 
 };
