@@ -14,6 +14,18 @@ This project was inspired by the following [Elon Musk](https://en.wikipedia.org/
 
 <a href="https://imgur.com/uJy27hg"><img src="https://i.imgur.com/uJy27hg.png" title="Elon Musk's tweet" /></a>
 
+# Calculation Explanation
+
+The calculation is:
+
+`(work hours per day) * (working days per week) * (weeks in a year) * (minutes in an hour) * (seconds in a minute)`
+
+which assumes the numbers:
+
+`7.5 * 5 * 52.1429 * 60 * 60`
+
+This will return the amount of total working seconds in a year (TWSY). Then, we divide the sum of the salaries by TWSY to get the total cost per second. This total cost has to be at least 0.01 of the selected currency, as there are no smaller physical currency entities for a user. The minimum possible salary sum which can return 0.01 is 35197. Therefore, if the salaries' sum is less than 35197 the application returns the `Please enter valid salaries.` error.
+
 # Build
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
