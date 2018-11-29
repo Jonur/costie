@@ -17,7 +17,7 @@ const Salaries = ({ history }) => {
   const handleInput = e => {
     let value = +e.target.value.replace(/[^0-9]/g, '');
 
-    if (String(e.target.value).match(/\d/g).length > SALARY_DIGITS) {
+    if (String(e.target.value).match(/\d/g) && (String(e.target.value).match(/\d/g).length > SALARY_DIGITS)) {
       e.target.value = +e.target.value.toString().slice(0, -1);
     } else {
       e.target.value = value ? value : '';
@@ -33,8 +33,12 @@ const Salaries = ({ history }) => {
             totalWorkedSecondsInYear = 7.5 * 5 * 52.1429 * 60 * 60,
             totalPerSecond = parseFloat((total / totalWorkedSecondsInYear).toFixed(2));
 
-          updateTotals(totalPerSecond);
-          history.push('/start-meeting');
+          if ([...document.querySelectorAll('input[id^="amount-"]')].some(i => !i.value) || !totalPerSecond) {
+            return false;
+          } else {
+            updateTotals(totalPerSecond);
+            history.push('/start-meeting');
+          }
         };
 
         const participantsOptions = [...Array(context.participants.selected).keys()].map(p => {
@@ -43,6 +47,7 @@ const Salaries = ({ history }) => {
               <InputLabel classes={{ focused: 'focused' }} htmlFor={'amount-' + p}>{context.dictionary.labelSalary} {p + 1}</InputLabel>
               <Input
                 id={'amount-' + p}
+                autoFocus={p === 0}
                 type="tel" pattern="[0-9]{9}" maxLength={SALARY_DIGITS} autoComplete="off" onInput={handleInput}
                 startAdornment={<InputAdornment position="start">{context.currencies.selected}</InputAdornment>}
               />
