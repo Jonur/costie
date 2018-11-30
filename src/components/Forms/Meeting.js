@@ -3,6 +3,8 @@ import Consumer from '../../CostieProvider';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import NavigateBefore from '@material-ui/icons/NavigateBefore';
+import PlayArrow from '@material-ui/icons/PlayArrow';
+import Stop from '@material-ui/icons/Stop';
 import Breakdown from './Breakdown';
 
 class Meeting extends Component {
@@ -65,12 +67,26 @@ class Meeting extends Component {
                 {this.state.hoursDisplay}:{this.state.minutesDisplay}:{this.state.secondsDisplay}
               </Typography>
 
-              {this.state.button === 'begin' && <Button variant="contained" onClick={() => this.beginTimer(context.totalPerSecond)}>
-                {context.dictionary.buttonStart}</Button>}
-              {this.state.button === 'end' && <Button variant="contained" onClick={this.endTimer}>
-                {context.dictionary.buttonEnd}</Button>}
-              {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>
-                {context.dictionary.buttonNew}</Button>}
+              <div className={this.state.button === 'begin' ? 'step-nav' : ''}>
+                <div className="push-right">
+                  {this.state.button === 'begin' &&
+                    <Button variant="contained" className="normalise-right" onClick={() => this.beginTimer(context.totalPerSecond)}>
+                      {context.dictionary.buttonStart} <PlayArrow className="next" />
+                    </Button>}
+                  {this.state.button === 'end' &&
+                    <Button variant="contained" className="normalise-right" onClick={this.endTimer}>
+                      {context.dictionary.buttonEnd} <Stop className="next" />
+                    </Button>}
+                  {this.state.button === 'new' && <Button variant="contained" onClick={this.handleBackToStart}>
+                    {context.dictionary.buttonNew}</Button>}
+                </div>
+                {this.state.button === 'begin' &&
+                  <div className="push-left">
+                    <Button variant="outlined" className="outlined normalise-left" onClick={this.handleBackToSalaries}>
+                      <NavigateBefore className="before" /> {context.dictionary.buttonBack}
+                    </Button>
+                  </div>}
+              </div>
 
               <Breakdown />
             </div>
