@@ -77,4 +77,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Translations
 
-Alex (German), [Santiago Eliard](https://www.linkedin.com/in/santiago-gonzalez-eliard-87978839/) (Spanish), [Zoltán Tóth](https://www.linkedin.com/in/zolt%C3%A1n-t%C3%B3th-developer/) (Hungarian), [Ivan Vieira](https://www.linkedin.com/in/ivan-vieira-40494551/) (Portuguese), [Jonas Vang Gregersen](https://www.linkedin.com/in/jonas-vang/) (Danish)
+Alex (German), [Flavio Damasco](https://www.linkedin.com/in/flaviodamasco/) (Italian), [Ivan Vieira](https://www.linkedin.com/in/ivan-vieira-40494551/) (Portuguese), [Jonas Vang Gregersen](https://www.linkedin.com/in/jonas-vang/) (Danish), [Mathilde Carraro](https://www.linkedin.com/in/mathilde-carraro-4a554a4b/) (French), [Santiago Eliard](https://www.linkedin.com/in/santiago-gonzalez-eliard-87978839/) (Spanish), [Zoltán Tóth](https://www.linkedin.com/in/zolt%C3%A1n-t%C3%B3th-developer/) (Hungarian)

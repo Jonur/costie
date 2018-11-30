@@ -54,14 +54,17 @@
   "buttonNew": "Nouveau",
   "buttonEnd": "Terminer",
   "notificationParticipants": "Veuillez sélectionner un nombre de participants.",
-  "notificationSalaries": "Veuillez entrer les salaires valides."
+  "notificationParticipantsSecondary": "Indiquer le nombre de participants à la réunion.",
+  "notificationSalaries": "Veuillez entrer les salaires valides.",
+  "notificationSalariesSecondary": "Passer l'appareil à chaque participant et entrer le salaire annuel brut.",
+  "notificationSalariesSecondaryError": "Champ vide ou le montant total est trop bas."
  },
  "Español": {
   "header": "Costie",
   "subheader": "El tiempo es oro.",
   "labelNumberOfParticipants": "Número de participantes",
   "labelSalary": "Salario",
-  "labelCostBreakdown": "desglose del costo",
+  "labelCostBreakdown": "Desglose del costo",
   "labelCostBreakdown15mins": "15 mins",
   "labelCostBreakdown30mins": "30 mins",
   "labelCostBreakdown60mins": "1 hora",
@@ -90,7 +93,10 @@
   "buttonNew": "Novo",
   "buttonEnd": "Fim",
   "notificationParticipants": "Por favor selecione o número de particiantes.",
-  "notificationSalaries": "Por favor entre salários válidos."
+  "notificationParticipantsSecondary": "Selecione o número de participantes na reunião.",
+  "notificationSalaries": "Por favor entre salários válidos.",
+  "notificationSalariesSecondary": "Passe o dispositivo para o próximo participante e preencha-o com o salário bruto.",
+  "notificationSalariesSecondaryError": "Campos não preenchidos ou o valor total não é suficiente."
  },
  "Magyar": {
   "header": "Costie",
@@ -108,7 +114,10 @@
   "buttonNew": "Új",
   "buttonEnd": "Vége",
   "notificationParticipants": "Adja meg a résztvevők számát.",
-  "notificationSalaries": "Adja meg a fizetési igényét."
+  "notificationParticipantsSecondary": "Válaszd ki a  résztvevők számát.",
+  "notificationSalaries": "Adja meg a fizetési igényét.",
+  "notificationSalariesSecondary": "Add körbe a keszüléket, hogy a résztvevők beírják az adózás előtti éves fizetésüket .",
+  "notificationSalariesSecondaryError": "Üres mező vagy a total összege túl alacsony."
  },
  "Ελληνικά": {
   "header": "Costie",
@@ -126,7 +135,10 @@
   "buttonNew": "Νεο",
   "buttonEnd": "Τελος",
   "notificationParticipants": "Επιλέξτε αριθμό συμμετεχόντων.",
-  "notificationSalaries": "Εισάγετε έγκυρους μισθούς."
+  "notificationParticipantsSecondary": "Επιλέξτε τον αριθμό συμμετεχόντων στο μίτινγκ.",
+  "notificationSalaries": "Εισάγετε έγκυρους μισθούς.",
+  "notificationSalariesSecondary": "Περιφέρετε τη συσκευή και συμπληρώστε προτιμότερα με ετήσιους μικτούς μισθούς.",
+  "notificationSalariesSecondaryError": "Κενά πεδία ή το σύνολο είναι πολύ χαμηλό."
  },
  "Dansk": {
   "header": "Costie",
@@ -145,5 +157,26 @@
   "buttonEnd": "Slut",
   "notificationParticipants": "Vælg antal af mødedeltagere.",
   "notificationSalaries": "Indtast jeres lønninger."
+ },
+ "Italiano": {
+  "header": "Costie",
+  "subheader": "Il tempo è denaro.",
+  "labelNumberOfParticipants": "Numero di partecipanti",
+  "labelSalary": "Stipendio",
+  "labelCostBreakdown": "Previsione dei costi",
+  "labelCostBreakdown15mins": "15 minuti",
+  "labelCostBreakdown30mins": "30 minuti",
+  "labelCostBreakdown60mins": "1 ora",
+  "labelCostBreakdown120mins": "2 ore",
+  "buttonNext": "Avanti",
+  "buttonBack": "Indietro",
+  "buttonStart": "Inizia",
+  "buttonNew": "Nuovo",
+  "buttonEnd": "Fine",
+  "notificationParticipants": "Seleziona un numero di partecipanti.",
+  "notificationParticipantsSecondary": "Seleziona il numero di partecipanti al meeting.",
+  "notificationSalaries": "Inserisci gli stipendi.",
+  "notificationSalariesSecondary": "Fai girare il dispositivo e inserisci lo stipendio annuo lordo.",
+  "notificationSalariesSecondaryError": "Ci sono campi vuoti o il totale è troppo basso."
  }
 }
