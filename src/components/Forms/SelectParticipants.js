@@ -1,5 +1,6 @@
 import React from 'react';
 import Consumer from '../../CostieProvider';
+import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -25,6 +26,11 @@ const SelectParticipants = ({ history }) => {
                 {participantsOptions}
               </NativeSelect>
             </FormControl>
+
+            <Typography variant="caption" align="left" className="notification below">
+              {context.dictionary.notificationParticipantsSecondary}
+            </Typography>
+
             <Button variant="contained" className="normalise-right" disabled={participants.selected < 2} onClick={handleClick}>
               {context.dictionary.buttonNext} <NavigateNext className="next" />
             </Button>

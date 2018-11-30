@@ -1,9 +1,29 @@
 .app {
+  .notification {
+    color: $costie-grey;
+
+    &.error {
+      color: $costie-red;
+    }
+
+    &.above {
+      margin-top: 40px;
+    }
+
+    &.below {
+      margin-top: 10px;
+    }
+  }
+
   .costie-form {
     width: 100%;
 
     &:first-of-type {
       margin-top: 40px;
+    }
+
+    &.reduce-spacing:first-of-type {
+      margin-top: 20px;
     }
 
     &:not(:first-of-type) {

@@ -15,7 +15,10 @@
   "buttonNew": "New",
   "buttonEnd": "End",
   "notificationParticipants": "Please select a number of participants.",
-  "notificationSalaries": "Please enter valid salaries."
+  "notificationParticipantsSecondary": "Select the number of the participants in the meeting.",
+  "notificationSalaries": "Please enter valid salaries.",
+  "notificationSalariesSecondary": "Pass around the device and fill in with annual salary before tax.",
+  "notificationSalariesSecondaryError": "Empty fields or the total amount is too low."
  },
  "Deutsch": {
   "header": "Costie",
