@@ -36,7 +36,10 @@
   "buttonNew": "Neu",
   "buttonEnd": "Ende",
   "notificationParticipants": "Bitte wählen Sie die Anzahl der Teilnehmer aus.",
-  "notificationSalaries": "Bitte tragen Sie gültige Gehälter ein."
+  "notificationParticipantsSecondary": "",
+  "notificationSalaries": "Bitte tragen Sie gültige Gehälter ein.",
+  "notificationSalariesSecondary": "",
+  "notificationSalariesSecondaryError": ""
  },
  "Français": {
   "header": "Costie",
@@ -75,7 +78,10 @@
   "buttonNew": "Nuevo",
   "buttonEnd": "Terminar",
   "notificationParticipants": "Por favor seleccione el número de participantes.",
-  "notificationSalaries": "Por favor introduzca un salario válido."
+  "notificationParticipantsSecondary": "Elija el número de participantes en esta junta.",
+  "notificationSalaries": "Por favor introduzca un salario válido.",
+  "notificationSalariesSecondary": "Comparta el dispositivo con las demás personas involucradas e ingresen sus respectivos sueldos brutos.",
+  "notificationSalariesSecondaryError": "Verifique que no haya campos vacíos y que el sueldo dado sea correcto."
  },
  "Português": {
   "header": "Costie",
@@ -156,7 +162,10 @@
   "buttonNew": "Ny",
   "buttonEnd": "Slut",
   "notificationParticipants": "Vælg antal af mødedeltagere.",
-  "notificationSalaries": "Indtast jeres lønninger."
+  "notificationParticipantsSecondary": "Vælg nummeret på deltagerne i mødet.",
+  "notificationSalaries": "Indtast jeres lønninger.",
+  "notificationSalariesSecondary": "Pass omkring enheden og udfyld årsløn før skat.",
+  "notificationSalariesSecondaryError": "Tomme felter eller det samlede beløb er for lavt."
  },
  "Italiano": {
   "header": "Costie",

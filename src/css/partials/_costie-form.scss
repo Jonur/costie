@@ -47,6 +47,20 @@
       font-family: "text-security-disc";
       -webkit-text-security: disc;
     }
+
+    &.error {
+      > label {
+        color: $costie-red;
+
+        + div:before {
+          border-bottom: 2px solid $costie-red;
+        }
+      }
+
+      p {
+        color: $costie-red;
+      }
+    }
   }
 
   label {

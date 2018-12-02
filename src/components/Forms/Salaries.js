@@ -11,12 +11,13 @@ import NavigateNext from '@material-ui/icons/NavigateNext';
 
 class Salaries extends Component {
   state = {
-    error: false
+    error: false,
+    inputFields: []
   };
 
   SALARY_DIGITS = 9;
 
-  collectSalaries = () => [...document.querySelectorAll('input[id^="amount-"]')].reduce((sum, i) => sum + +i.value, 0);
+  collectSalaries = () => this.state.inputFields.reduce((sum, i) => sum + +i.value, 0);
 
   handleBack = () => this.props.history.push('/');
 
@@ -30,6 +31,30 @@ class Salaries extends Component {
     }
   };
 
+  validateForm = () => {
+    const status = this.state.inputFields.some(i => !i.value);
+
+    this.state.inputFields.forEach(i => {
+      if (!i.value) {
+        i.setAttribute('aria-invalid', 'true');
+        i.parentNode.parentNode.classList.add('error');
+      } else {
+        i.setAttribute('aria-invalid', 'false');
+        i.parentNode.parentNode.classList.remove('error');
+      }
+    });
+
+    if (!status) {
+      this.setState({ error: false });
+    }
+
+    return status;
+  };
+
+  componentDidMount() {
+    this.setState({ inputFields: [...document.querySelectorAll('input[id^="amount-"]')] });
+  }
+
   render() {
     return (
       <Consumer>
@@ -40,10 +65,11 @@ class Salaries extends Component {
               totalWorkedSecondsInYear = 7.5 * 5 * 52.1429 * 60 * 60,
               totalPerSecond = parseFloat((total / totalWorkedSecondsInYear).toFixed(2));
 
-            if ([...document.querySelectorAll('input[id^="amount-"]')].some(i => !i.value) || !totalPerSecond) {
+            if (this.validateForm() || !totalPerSecond) {
               this.setState({ error: true });
               return false;
             } else {
+              this.setState({ error: false });
               updateTotals(totalPerSecond);
               this.props.history.push('/start-meeting');
             }
@@ -56,7 +82,8 @@ class Salaries extends Component {
                 <Input
                   id={'amount-' + p}
                   autoFocus={p === 0}
-                  type="tel" pattern="[0-9]{9}" maxLength={this.SALARY_DIGITS} autoComplete="off" onInput={this.handleInput}
+                  type="tel" pattern="[0-9]{9}" maxLength={this.SALARY_DIGITS} autoComplete="off"
+                  onInput={this.handleInput} onBlur={this.validateForm}
                   startAdornment={<InputAdornment position="start">{context.currencies.selected}</InputAdornment>}
                 />
               </FormControl>
