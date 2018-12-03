@@ -36,10 +36,10 @@
   "buttonNew": "Neu",
   "buttonEnd": "Ende",
   "notificationParticipants": "Bitte wählen Sie die Anzahl der Teilnehmer aus.",
-  "notificationParticipantsSecondary": "",
+  "notificationParticipantsSecondary": "Wählen Sie die Anzahl der Teilnehmer aus.",
   "notificationSalaries": "Bitte tragen Sie gültige Gehälter ein.",
-  "notificationSalariesSecondary": "",
-  "notificationSalariesSecondaryError": ""
+  "notificationSalariesSecondary": "Geben Sie das Gerät weiter und geben das jährliche Bruttoeinkommen ein.",
+  "notificationSalariesSecondaryError": "Es gibt leere Felder oder die Gesamtsumme ist zu niedrig."
  },
  "Français": {
   "header": "Costie",
@@ -141,7 +141,7 @@
   "buttonNew": "Νεο",
   "buttonEnd": "Τελος",
   "notificationParticipants": "Επιλέξτε αριθμό συμμετεχόντων.",
-  "notificationParticipantsSecondary": "Επιλέξτε τον αριθμό συμμετεχόντων στο μίτινγκ.",
+  "notificationParticipantsSecondary": "Επιλέξτε τον αριθμό συμμετεχόντων στο meeting.",
   "notificationSalaries": "Εισάγετε έγκυρους μισθούς.",
   "notificationSalariesSecondary": "Περιφέρετε τη συσκευή και συμπληρώστε προτιμότερα με ετήσιους μικτούς μισθούς.",
   "notificationSalariesSecondaryError": "Κενά πεδία ή το σύνολο είναι πολύ χαμηλό."
