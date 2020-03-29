@@ -17,14 +17,14 @@
     "url": "https://github.com/Jonur/costie.git"
   },
   "dependencies": {
-    "@material-ui/core": "^3.4.0",
+    "@material-ui/core": "^3.9.4",
     "material-ui": "^0.20.2",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.3",
-    "serve": "^10.1.1"
+    "react-scripts": "^3.4.1",
+    "serve": "^10.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,7 +43,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@material-ui/icons": "^3.0.1",
-    "node-sass": "^4.10.0"
+    "@material-ui/icons": "^3.0.2",
+    "node-sass": "^4.13.1"
   }
 }
