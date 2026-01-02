@@ -103,8 +103,8 @@ const Timer = () => {
             viewBox="0 0 24 24"
             width="22px"
             className={c("fill-darkgrey", {
-              "rotate-180 transition-transform": openBreakdown,
-              "transition-transform": !openBreakdown,
+              "transition-transform": openBreakdown,
+              "rotate-180 transition-transform": !openBreakdown,
             })}
           >
             <path d="M0 0h24v24H0V0z" fill="none" />
