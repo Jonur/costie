@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        "h-md": { raw: "(min-height: 768px)" },
+        "h-md": { raw: "(min-height: 992px)" },
       },
       backgroundImage: {
         "split-black-primary":
