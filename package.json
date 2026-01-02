@@ -15,7 +15,7 @@
     "url": "https://github.com/Jonur/costie.git"
   },
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "all": "npm run typecheck && npm run lint && npm run build",
