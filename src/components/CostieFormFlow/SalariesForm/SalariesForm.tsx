@@ -55,9 +55,10 @@ const SalariesForm = () => {
           </label>
 
           <div className="relative">
-            <span className="absolute left-0 top-1 text-black">{currencySymbol}</span>
+            <span className="absolute left-0.5 top-1 text-black">{currencySymbol}</span>
+
             <input
-              type="password"
+              type="text"
               inputMode="numeric"
               pattern="[0-9]*"
               maxLength={7}
@@ -65,19 +66,26 @@ const SalariesForm = () => {
               autoComplete="off"
               autoCorrect="off"
               spellCheck={false}
-              data-bwignore="true"
-              data-lpignore="true"
-              data-1p-ignore="true"
-              data-form-type="other"
               enterKeyHint="done"
               id={`salary-${participantIndex}`}
               name={`salary-${participantIndex}`}
-              value={participantSalaries[participantIndex] > 0 ? participantSalaries[participantIndex] : ""}
+              value={participantSalaries[participantIndex] > 0 ? String(participantSalaries[participantIndex]) : ""}
               onChange={(e) => handleChangeSalaryInput(e, participantIndex)}
-              className="w-full border-b border-lightgrey py-1 px-3 focus:outline-none"
+              onContextMenu={(e) => e.preventDefault()}
+              className="relative z-10 w-full border-b border-lightgrey py-1 pl-4 pr-3 bg-transparent text-transparent caret-black focus:outline-none font-mono tabular-nums tracking-wider select-none"
               placeholder="0"
               required
             />
+
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 flex items-center py-1 pl-4 pr-3 text-black font-mono tabular-nums tracking-wider select-none"
+              onContextMenu={(e) => e.preventDefault()}
+            >
+              {"•".repeat(
+                participantSalaries[participantIndex] > 0 ? String(participantSalaries[participantIndex]).length : 0
+              )}
+            </div>
           </div>
         </div>
       ))}
