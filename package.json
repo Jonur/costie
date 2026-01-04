@@ -29,7 +29,6 @@
     "typecheck": "tsc -p ."
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
     "classnames": "^2.5.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
@@ -39,6 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
