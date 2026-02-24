@@ -1,6 +1,6 @@
 {
   "name": "costie",
-  "description": "A meeting cost time-calculator based on the participants’ salaries.",
+  "description": "Costie is a real-time meeting cost calculator. Enter participants’ salaries and track the true cost of your meetings per second — privacy-friendly and client-side only.",
   "bugs": {
     "url": "https://github.com/Jonur/costie/issues",
     "email": "d.k.damilos@gmail.com"
@@ -29,6 +29,8 @@
     "typecheck": "tsc -p ."
   },
   "dependencies": {
+    "@fontsource/bubblegum-sans": "^5.2.8",
+    "@fontsource/roboto": "^5.2.10",
     "classnames": "^2.5.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
